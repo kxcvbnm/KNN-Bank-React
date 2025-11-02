@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="navbar-logo">
                     <Landmark size={35} strokeWidth={1.5} />
-                    <Link to="/" className="navbar-logo">
+                    <Link to="/home" className="navbar-logo">
                         KNN BANK
                     </Link>
                 </div>
