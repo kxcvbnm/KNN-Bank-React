@@ -1,4 +1,5 @@
 import { apiService } from "../services/api";
+import { ShieldUser, Smartphone, Clock } from "lucide-react";
 
 const Home = () => {
 
@@ -25,19 +26,25 @@ const Home = () => {
                     <p>We provide comprehensive banking solutions designed to meet your financial needs with security and convenience.</p>
                     <div className="features-grid">
                         <div className="feature">
-                            <div className="feature-icon">🔒</div>
-                            <h3>Secure</h3>
-                            <p>Bank-level security to keep your money and information safe.</p>
+                            <div className="feature-icon">
+                                <ShieldUser size={60} strokeWidth={1.5} />
+                            </div>
+                            <h3>Bank-Level Security</h3>
+                            <p>Advanced encryption and multi-factor authentication for secure transactions.</p>
                         </div>
                         <div className="feature">
-                            <div className="feature-icon">⚡</div>
-                            <h3>Fast</h3>
-                            <p>Instant transfers and quick access to your funds.</p>
+                            <div className="feature-icon">
+                                <Smartphone size={60} strokeWidth={1.5} />
+                            </div>
+                            <h3>Mobile Banking</h3>
+                            <p>Manage your finances anywhere, anytime.</p>
                         </div>
                         <div className="feature">
-                            <div className="feature-icon">💎</div>
-                            <h3>Reliable</h3>
-                            <p>Trusted by thousands of customers worldwide.</p>
+                            <div className="feature-icon">
+                                <Clock size={60} strokeWidth={1.5} />
+                            </div>
+                            <h3>24/7 Support</h3>
+                            <p>Round-the-clock customer service to help you with any banking needs.</p>
                         </div>
                     </div>
                 </div>
