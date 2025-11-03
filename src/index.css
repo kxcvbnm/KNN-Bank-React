@@ -8,7 +8,7 @@ body {
   font-family: Trebuchet MS;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f9fa;
+  background-color: #e6cfa9;
 }
 
 /* NAVBAR STYLING */
@@ -679,7 +679,7 @@ body {
 .profile-roles,
 .profile-picture-section,
 .accounts-section {
-  background: #e6cfa9;
+  background: #fbf9d1;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -704,7 +704,7 @@ body {
 
 .profile-container .info-item {
   padding: 15px;
-  background: #fbf9d1;
+  background: #e6cfa9;
   border-radius: 8px;
 }
 
@@ -1044,6 +1044,34 @@ body {
   color: #666;
 }
 
+.password-guidelines {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 2px solid #c3c3c3;
+}
+
+.password-guidelines h3 {
+  color: #9a3f3f;
+}
+
+.password-guidelines li {
+  color: #6b6b6b;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.field-error {
+  white-space: nowrap;
+  color: #cf4040;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .upload-controls {
@@ -1072,16 +1100,17 @@ body {
 .transfer-header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #9a3f3f;
 }
 
 .transfer-header h1 {
-  color: #1a237e;
+  color: #9a3f3f;
   margin: 0;
 }
 
 .transfer-content {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -1094,7 +1123,7 @@ body {
 }
 
 .transfer-form {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .form-group {
@@ -1120,7 +1149,7 @@ body {
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #1a237e;
+  border-color: #9a3f3f;
   outline: none;
 }
 
@@ -1133,14 +1162,14 @@ body {
 
 .transfer-guidelines {
   flex: 1;
-  background: #f8f9fa;
+  background: #e0e0e0;
   padding: 25px;
   border-radius: 10px;
-  border-left: 4px solid #1a237e;
+  border: 2px solid #c3c3c3;
 }
 
 .transfer-guidelines h3 {
-  color: #1a237e;
+  color: #9a3f3f;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -1148,12 +1177,16 @@ body {
 .transfer-guidelines ul {
   margin: 0;
   padding-left: 20px;
-  color: #555;
+  color: #696969;
 }
 
 .transfer-guidelines li {
   margin-bottom: 10px;
   line-height: 1.4;
+}
+
+.balance-check {
+  white-space: nowrap;
 }
 
 .error-message,
@@ -1193,16 +1226,17 @@ body {
   margin: 0 auto;
   padding: 30px 20px;
   min-height: calc(100vh - 160px);
+  background-color: #e6cfa9;
 }
 
 .transactions-container .transactions-header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #9a3f3f;
 }
 
 .transactions-container .transactions-header h1 {
-  color: #1a237e;
+  color: #9a3f3f;
   margin: 0;
 }
 
@@ -1232,11 +1266,11 @@ body {
 }
 
 .transactions-container .transaction-item {
-  background: white;
+  background: #fbf9d1;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #1a237e;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #9a3f3f;
 }
 
 .transactions-container .transaction-main {
@@ -1248,11 +1282,11 @@ body {
 
 .transactions-container .transaction-type {
   font-weight: 600;
-  color: #1a237e;
+  color: #9a3f3f;
   text-transform: capitalize;
   padding: 5px 10px;
-  background: #f0f2ff;
-  border-radius: 5px;
+  background: #f7cece;
+  border-radius: 8px;
 }
 
 .transactions-container .transaction-amount {
@@ -1292,7 +1326,7 @@ body {
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;
-  background: #e8f5e9;
+  background: #c6fbcb;
   color: #2e7d32;
   align-self: flex-start;
 }
@@ -1314,7 +1348,7 @@ body {
 
 .transactions-container .pagination-btn {
   padding: 10px 20px;
-  background: #1a237e;
+  background: #9a3f3f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -1323,7 +1357,7 @@ body {
 }
 
 .transactions-container .pagination-btn:disabled {
-  background: #9fa8da;
+  background: #e38181;
   cursor: not-allowed;
 }
 
@@ -1387,11 +1421,11 @@ body {
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #9a3f3f;
 }
 
 .dashboard-header h1 {
-  color: #1a237e;
+  color: #9a3f3f;
   margin: 0;
 }
 
@@ -1416,9 +1450,9 @@ body {
 }
 
 .tab-btn.active {
-  background: #1a237e;
+  background: #9a3f3f;
   color: white;
-  border-color: #1a237e;
+  border-color: #9a3f3f;
 }
 
 .tab-btn:disabled {
@@ -1441,7 +1475,7 @@ body {
 }
 
 .stat-card {
-  background: #f8f9fa;
+  background: rgb(154, 63, 63, 0.2);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -1456,7 +1490,7 @@ body {
 .stat-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #1a237e;
+  color: #9a3f3f;
   margin: 0;
 }
 
@@ -1466,7 +1500,7 @@ body {
 
 .quick-actions h2 {
   margin-bottom: 20px;
-  color: #1a237e;
+  color: #9a3f3f;
 }
 
 .action-buttons {
@@ -1483,7 +1517,7 @@ body {
 
 .search-form h3 {
   margin-bottom: 15px;
-  color: #1a237e;
+  color: #9a3f3f;
 }
 
 .form-group {
@@ -1501,7 +1535,7 @@ body {
 }
 
 .detail-card {
-  background: #f8f9fa;
+  background: rgb(154, 63, 63, 0.2);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -1527,7 +1561,7 @@ body {
 }
 
 .role-badge {
-  background: #1a237e;
+  background: #9a3f3f;
   color: white;
   padding: 4px 8px;
   border-radius: 12px;
@@ -1554,7 +1588,7 @@ body {
 
 .account-card,
 .transaction-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #9a3f3f;
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
@@ -1571,7 +1605,7 @@ body {
 .account-header h4,
 .transaction-header h4 {
   margin: 0;
-  color: #1a237e;
+  color: #9a3f3f;
 }
 
 .account-details,
@@ -1612,22 +1646,22 @@ body {
 }
 
 .btn-primary {
-  background-color: #1a237e;
+  background-color: #9a3f3f;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #283593;
+  background-color: #9a3f3f;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #1a237e;
-  border: 1px solid #1a237e;
+  color: #9a3f3f;
+  border: 1px solid #9a3f3f;
 }
 
 .btn-secondary:hover {
-  background-color: #1a237e;
+  background-color: #9a3f3f;
   color: white;
 }
 
@@ -1743,16 +1777,16 @@ body {
 }
 
 .account-info {
-  background: #f8f9fa;
+  background: rgb(154, 63, 63, 0.2);
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
-  border-left: 4px solid #1a237e;
+  border: 2px solid #9a3f3f;
 }
 
 .account-info h4 {
   margin-bottom: 10px;
-  color: #1a237e;
+  color: #9a3f3f;
 }
 
 .account-details p {
