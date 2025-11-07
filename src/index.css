@@ -99,6 +99,7 @@ body {
   background: none;
   border: none;
   font: inherit;
+  font-size: 0.55rem;
   color: #fffbde;
   cursor: pointer;
   padding: 0;
@@ -412,6 +413,12 @@ body {
   text-shadow: 2px 2px #096b68;
 }
 
+.auth-form .auth-subtitle {
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 /* INPUTS */
 .form-row {
   display: flex;
@@ -440,7 +447,7 @@ body {
   background: #90d1ca;
   color: #096b68;
   font-family: "Press Start 2P", cursive;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .form-group input:focus {
@@ -459,7 +466,7 @@ body {
   font-family: "Press Start 2P", cursive;
   cursor: pointer;
   font-size: 0.55rem;
-  box-shadow: 3px 3px 0 #129990;
+  box-shadow: 3px 3px 0 #096b68;
   transition: all 0.15s ease;
 }
 
@@ -2152,23 +2159,26 @@ body {
   }
 }
 
-/*NOT FOUND WILDCARD*/
+/* NOT FOUND — Aqua Pixel Theme */
 .not-found-container {
   min-height: calc(100vh - 160px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #129990 0%, #096b68 100%);
 }
 
 .not-found-content {
   text-align: center;
   max-width: 600px;
-  background: white;
+  background: #129990;
   padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 3px solid #fffbde;
+  box-shadow: 6px 6px 0 #096b68;
+  color: #fffbde;
+  font-family: "Press Start 2P", cursive;
 }
 
 .not-found-animation {
@@ -2182,8 +2192,8 @@ body {
 .not-found-number {
   font-size: 8rem;
   font-weight: 900;
-  color: #9a3f3f;
-  text-shadow: 4px 4px 0 rgba(26, 35, 126, 0.2);
+  color: #fffbde;
+  text-shadow: 4px 4px 0 #096b68;
   animation: bounce 2s infinite linear;
 }
 
@@ -2200,9 +2210,10 @@ body {
   width: 90px;
   height: 100px;
   margin: 0 20px;
-  border: 15px solid #9a3f3f;
+  border: 10px solid #fffbde;
   border-radius: 50%;
-  box-shadow: 4px 4px 0 rgba(26, 35, 126, 0.2);
+  box-shadow: 4px 4px 0 #096b68;
+  background: #90d1ca;
   animation: bounce 2s infinite linear;
 }
 
@@ -2213,21 +2224,22 @@ body {
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  background: white;
+  background: #fffbde;
   border-radius: 50%;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .not-found-title {
-  font-size: 2.5rem;
-  color: #9a3f3f;
+  font-size: 1rem;
+  color: #fffbde;
+  text-shadow: 2px 2px #096b68;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .not-found-message {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 0.6rem;
+  color: #fffbde;
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -2240,25 +2252,49 @@ body {
   flex-wrap: wrap;
 }
 
+/* Buttons - Pixel Theme */
+.not-found-actions .btn.btn-primary {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 3px solid #fffbde;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 3px 3px 0 #096b68;
+  background-color: #096b68;
+  color: #fffbde;
+}
+
+.not-found-actions .btn.btn-primary:hover {
+  background-color: #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #90d1ca;
+  border-color: #129990;
+}
+
+.not-found-actions .btn.btn-secondary {
+  background-color: #129990;
+  color: #fffbde;
+  border: 3px solid #fffbde;
+}
+
+.not-found-actions .btn.btn-secondary:hover {
+  background-color: #fffbde;
+  color: #096b68;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
+}
+
 /* Animations */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0) scale(1);
   }
-
   50% {
     transform: translateY(-20px) scale(1.05);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -2276,7 +2312,7 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 15px;
-    border-width: 10px;
+    border-width: 8px;
   }
 
   .not-found-inner-circle {
@@ -2285,11 +2321,11 @@ body {
   }
 
   .not-found-title {
-    font-size: 2rem;
+    font-size: 0.9rem;
   }
 
   .not-found-message {
-    font-size: 1.1rem;
+    font-size: 0.55rem;
   }
 
   .not-found-actions {
