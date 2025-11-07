@@ -559,8 +559,8 @@ body {
 }
 
 .profile-container .profile-header h1 {
-  color: #096b68;
-  text-shadow: 2px 2px #90d1ca;
+  color: #fffbde;
+  text-shadow: 2px 2px #096b68;
 }
 
 .profile-container .profile-content {
@@ -818,7 +818,7 @@ body {
 }
 
 .profile-container .transaction-item {
-  background: #90d1ca;
+  background: #fffbde;
   border: 2px solid #fffbde;
   border-radius: 4px;
   color: #096b68;
@@ -835,8 +835,9 @@ body {
 .profile-container .transaction-type {
   font-weight: bold;
   font-size: 0.7rem;
-  color: #096b68;
+  color: #129990;
   text-transform: capitalize;
+  padding: 0;
 }
 
 .profile-container .transaction-date {
@@ -1024,8 +1025,8 @@ body {
 }
 
 .transfer-header h1 {
-  color: #096b68;
-  text-shadow: 2px 2px #90d1ca;
+  color: #fffbde;
+  text-shadow: 2px 2px #096b68;
   margin: 0;
   text-align: center;
 }
@@ -1224,24 +1225,27 @@ body {
   }
 }
 
-/*TRANSACTIONS*/
+/* TRANSACTIONS — Aqua Pixel Theme */
 .transactions-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px 20px;
   min-height: calc(100vh - 160px);
-  background-color: #e6cfa9;
+  background-color: #129990;
+  color: #fffbde;
 }
 
 .transactions-container .transactions-header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #9a3f3f;
+  border-bottom: 3px solid #90d1ca;
 }
 
 .transactions-container .transactions-header h1 {
-  color: #9a3f3f;
+  color: #fffbde;
+  text-shadow: 2px 2px #096b68;
   margin: 0;
+  text-align: center;
 }
 
 .transactions-container .account-selector {
@@ -1253,14 +1257,27 @@ body {
 
 .transactions-container .account-selector label {
   font-weight: 600;
-  color: #333;
+  color: #fffbde;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
 }
 
 .transactions-container .account-selector select {
   padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
+  font-size: 0.55rem;
+  font-family: "Press Start 2P", cursive;
+  background-color: #90d1ca;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #096b68;
+  transition: all 0.15s ease;
+}
+
+.transactions-container .account-selector select:focus {
+  outline: none;
+  border-color: #096b68;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 .transactions-container .transactions-list {
@@ -1270,11 +1287,12 @@ body {
 }
 
 .transactions-container .transaction-item {
-  background: #fbf9d1;
+  background: #90d1ca;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  border: 2px solid #9a3f3f;
+  border-radius: 4px;
+  border: 3px solid #fffbde;
+  box-shadow: 4px 4px 0 #096b68;
+  color: #096b68;
 }
 
 .transactions-container .transaction-main {
@@ -1286,58 +1304,68 @@ body {
 
 .transactions-container .transaction-type {
   font-weight: 600;
-  color: #9a3f3f;
+  color: #096b68;
   text-transform: capitalize;
   padding: 5px 10px;
-  background: #f7cece;
-  border-radius: 8px;
+  background: #fffbde;
+  border: 2px solid #129990;
+  border-radius: 14px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
+  box-shadow: 2px 2px 0 #096b68;
 }
 
 .transactions-container .transaction-amount {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  font-family: "Press Start 2P", cursive;
 }
 
 .transactions-container .transaction-amount.deposit {
-  color: #2e7d32;
+  color: #fffbde;
+  text-shadow: 1px 1px #096b68;
 }
 
 .transactions-container .transaction-amount.withdrawal,
 .transactions-container .transaction-amount.transfer {
-  color: #c62828;
+  color: #096b68;
 }
 
 .transactions-container .transaction-details {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
 }
 
 .transactions-container .transaction-date {
-  font-size: 0.9rem;
-  color: #777;
+  color: #096b68;
+  font-size: 0.5rem;
 }
 
 .transactions-container .transaction-description {
   margin: 0;
-  color: #333;
-  font-weight: 500;
+  color: #096b68;
+  font-weight: 600;
 }
 
 .transactions-container .transaction-status {
   display: inline-block;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.55rem;
   font-weight: 600;
-  background: #c6fbcb;
-  color: #2e7d32;
+  background: #096b68;
+  color: #fffbde;
+  border: 2px solid #90d1ca;
+  box-shadow: 2px 2px 0 #129990;
   align-self: flex-start;
 }
 
 .transactions-container .transaction-accounts {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.5rem;
+  color: #fffbde;
   margin-top: 5px;
 }
 
@@ -1351,46 +1379,68 @@ body {
 }
 
 .transactions-container .pagination-btn {
+  font-family: "Press Start 2P", cursive;
   padding: 10px 20px;
-  background: #9a3f3f;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  background: #096b68;
+  color: #fffbde;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 0.55rem;
+  box-shadow: 3px 3px 0 #129990;
+  transition: all 0.15s ease;
+}
+
+.transactions-container .pagination-btn:hover:not(:disabled) {
+  background: #fffbde;
+  color: #096b68;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 .transactions-container .pagination-btn:disabled {
-  background: #e38181;
+  background: #90d1ca;
+  color: #fffbde;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .transactions-container .pagination-info {
   font-weight: 600;
-  color: #333;
+  color: #fffbde;
+  font-size: 0.55rem;
+  font-family: "Press Start 2P", cursive;
 }
 
 .transactions-container .no-transactions {
   text-align: center;
   padding: 40px;
-  color: #666;
+  color: #fffbde;
   font-style: italic;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
 }
 
 .loading {
   text-align: center;
   padding: 40px;
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 0.6rem;
+  color: #fffbde;
+  font-family: "Press Start 2P", cursive;
 }
 
 .error-message {
-  background-color: #ffebee;
-  color: #c62828;
+  background-color: #fffbde22;
+  color: #fffbde;
   padding: 15px;
-  border-radius: 5px;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 3px 3px 0 #096b68;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
 }
 
 @media (max-width: 768px) {
@@ -1411,12 +1461,13 @@ body {
   }
 }
 
-/*AUDIT SECTION*/
+/* AUDITOR DASHBOARD — Aqua Pixel Theme */
 .auditor-dashboard {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   min-height: calc(100vh - 160px);
+  color: #fffbde;
 }
 
 .dashboard-header {
@@ -1425,12 +1476,14 @@ body {
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #9a3f3f;
+  border-bottom: 3px solid #90d1ca;
 }
 
 .dashboard-header h1 {
-  color: #9a3f3f;
+  color: #fffbde;
+  text-shadow: 2px 2px #096b68;
   margin: 0;
+  font-family: "Press Start 2P", cursive;
 }
 
 .tabs {
@@ -1441,22 +1494,28 @@ body {
 }
 
 .tab-btn {
+  font-family: "Press Start 2P", cursive;
   padding: 10px 20px;
-  background: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background: #129990;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
+  color: #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease;
+  font-size: 0.55rem;
 }
 
 .tab-btn:hover {
-  background: #e9ecef;
+  background: #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 .tab-btn.active {
-  background: #9a3f3f;
-  color: white;
-  border-color: #9a3f3f;
+  background: #fffbde;
+  color: #096b68;
+  border-color: #129990;
 }
 
 .tab-btn:disabled {
@@ -1465,10 +1524,11 @@ body {
 }
 
 .tab-content {
-  background: white;
+  background: #129990;
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 3px solid #fffbde;
+  box-shadow: 4px 4px 0 #096b68;
 }
 
 .overview-cards {
@@ -1479,23 +1539,28 @@ body {
 }
 
 .stat-card {
-  background: rgb(154, 63, 63, 0.2);
+  background: #90d1ca;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 4px;
+  border: 3px solid #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
   text-align: center;
+  color: #096b68;
 }
 
 .stat-card h3 {
   margin: 0 0 10px 0;
-  color: #555;
-  font-size: 1rem;
+  color: #096b68;
+  font-size: 0.6rem;
+  font-family: "Press Start 2P", cursive;
 }
 
 .stat-number {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #9a3f3f;
+  color: #096b68;
   margin: 0;
+  font-family: "Press Start 2P", cursive;
 }
 
 .quick-actions {
@@ -1504,13 +1569,35 @@ body {
 
 .quick-actions h2 {
   margin-bottom: 20px;
-  color: #9a3f3f;
+  color: #fffbde;
+  text-shadow: 1px 1px #096b68;
+  font-family: "Press Start 2P", cursive;
 }
 
 .action-buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
+}
+
+.action-buttons .btn.btn-primary {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px 20px;
+  background: #fffbde;
+  border: 3px solid #129990;
+  border-radius: 4px;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #fffbde;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.55rem;
+}
+
+.action-buttons .btn.btn-primary:hover {
+  background: #096b68;
+  color: #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
+  border-color: #fffbde;
 }
 
 .search-forms {
@@ -1521,7 +1608,29 @@ body {
 
 .search-form h3 {
   margin-bottom: 15px;
-  color: #9a3f3f;
+  color: #fffbde;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+}
+
+.search-form .btn.btn-primary {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px 20px;
+  background: #fffbde;
+  border: 3px solid #129990;
+  border-radius: 4px;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #fffbde;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.55rem;
+}
+
+.search-form .btn.btn-primary:hover {
+  background: #096b68;
+  color: #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
+  border-color: #fffbde;
 }
 
 .form-group {
@@ -1533,21 +1642,36 @@ body {
 .form-input {
   flex: 1;
   padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
+  font-size: 0.55rem;
+  font-family: "Press Start 2P", cursive;
+  background: #90d1ca;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #096b68;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 .detail-card {
-  background: rgb(154, 63, 63, 0.2);
+  background: #90d1ca;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 4px;
+  border: 3px solid #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #096b68;
   margin-bottom: 20px;
 }
 
 .detail-row {
   display: flex;
   margin-bottom: 10px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
 }
 
 .detail-row:last-child {
@@ -1556,46 +1680,51 @@ body {
 
 .label {
   font-weight: 600;
-  color: #555;
+  color: #096b68;
   min-width: 150px;
 }
 
 .value {
-  color: #333;
+  color: #096b68;
 }
 
 .role-badge {
-  background: #9a3f3f;
-  color: white;
+  background: #096b68;
+  color: #fffbde;
   padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.55rem;
+  box-shadow: 2px 2px 0 #129990;
   margin-right: 5px;
 }
 
 .status {
   padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  border-radius: 4px;
+  font-size: 0.55rem;
   font-weight: 600;
+  border: 2px solid #fffbde;
 }
 
 .status.active {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: #90d1ca;
+  color: #096b68;
 }
 
 .status.inactive {
-  background: #ffebee;
-  color: #c62828;
+  background: #fffbde;
+  color: #096b68;
 }
 
 .account-card,
 .transaction-card {
-  border: 1px solid #9a3f3f;
-  border-radius: 10px;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
   padding: 15px;
   margin-bottom: 15px;
+  background: #90d1ca;
+  color: #fffbde;
+  box-shadow: 4px 4px 0 #096b68;
 }
 
 .account-header,
@@ -1609,12 +1738,20 @@ body {
 .account-header h4,
 .transaction-header h4 {
   margin: 0;
-  color: #9a3f3f;
+  color: #096b68;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
+}
+
+.transaction-header .status {
+  background-color: #096b68;
 }
 
 .account-details,
 .transaction-details {
-  color: #555;
+  color: #fffbde;
+  font-size: 0.55rem;
+  font-family: "Press Start 2P", cursive;
 }
 
 .account-details p,
@@ -1622,51 +1759,85 @@ body {
   margin: 5px 0;
 }
 
+.account-details .btn.btn-primary {
+  margin-top: 10px;
+  font-family: "Press Start 2P", cursive;
+  padding: 10px 20px;
+  background: #096b68;
+  border: 3px solid #fffbde;
+  border-radius: 4px;
+  color: #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.55rem;
+}
+
+.account-details .btn.btn-primary:hover {
+  background: #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #fffbde;
+  border-color: #096b68;
+}
+
 .error-message {
-  background-color: #ffebee;
-  color: #c62828;
+  background-color: #fffbde22;
+  color: #fffbde;
+  border: 3px solid #fffbde;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-bottom: 20px;
-  font-weight: 500;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
+  box-shadow: 3px 3px 0 #096b68;
 }
 
 .loading {
   text-align: center;
   padding: 40px;
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 0.6rem;
+  color: #fffbde;
+  font-family: "Press Start 2P", cursive;
 }
 
+/* Buttons */
 .btn {
   padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
+  border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  font-size: 16px;
+  transition: all 0.15s ease;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
 }
 
 .btn-primary {
-  background-color: #9a3f3f;
-  color: white;
+  background-color: #096b68;
+  color: #fffbde;
+  border: 3px solid #fffbde;
+  box-shadow: 3px 3px 0 #129990;
 }
 
 .btn-primary:hover {
-  background-color: #9a3f3f;
+  background-color: #fffbde;
+  color: #096b68;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: #9a3f3f;
-  border: 1px solid #9a3f3f;
+  background-color: #129990;
+  color: #fffbde;
+  border: 3px solid #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
 }
 
 .btn-secondary:hover {
-  background-color: #9a3f3f;
-  color: white;
+  background-color: #fffbde;
+  color: #096b68;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
 }
 
 @media (max-width: 768px) {
@@ -1861,8 +2032,8 @@ body {
 }
 
 .transaction-details {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.7rem;
+  color: #fffbde;
 }
 
 .transaction-date {
