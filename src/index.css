@@ -1538,6 +1538,25 @@ body {
   box-shadow: 4px 4px 0 #096b68;
 }
 
+.tab-content .transaction-details h2 {
+  color: #fffbde;
+  text-shadow: 3px 3px 0 #096b68;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.tab-content .user-details h2 {
+  color: #fffbde;
+  text-shadow: 3px 3px 0 #096b68;
+  margin-bottom: 10px;
+}
+
+.tab-content .user-details h3 {
+  color: #fffbde;
+  text-shadow: 3px 3px 0 #096b68;
+  margin-bottom: 10px;
+}
+
 .overview-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2347,4 +2366,306 @@ body {
   .not-found-number {
     font-size: 4rem;
   }
+}
+
+/* ==============================
+   DEPOSIT PAGE (Aqua Pixel Theme)
+   ============================== */
+
+.admin-deposit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fffbde;
+  min-height: calc(100vh - 160px);
+  font-family: "Press Start 2P", cursive;
+  color: #096b68;
+}
+
+.admin-deposit-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #90d1ca;
+  padding-bottom: 10px;
+}
+
+.admin-deposit-header h2 {
+  color: #096b68;
+  text-shadow: 2px 2px #90d1ca;
+  font-size: 0.8rem;
+}
+
+/* Layout sections */
+.deposit-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.deposit-form-section,
+.recent-transactions-section {
+  flex: 1;
+  min-width: 340px;
+}
+
+/* Form Card */
+.form-card {
+  background: #129990;
+  border: 3px solid #fffbde;
+  box-shadow: 6px 6px 0 #096b68;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #fffbde;
+  text-shadow: 1px 1px #096b68;
+  font-size: 0.7rem;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #fffbde;
+  font-size: 0.55rem;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.55rem;
+  background-color: #fffbde;
+  border: 2px solid #90d1ca;
+  border-radius: 4px;
+  color: #096b68;
+  font-family: "Press Start 2P", cursive;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #129990;
+}
+
+/* Input with Verify button */
+.input-with-button {
+  display: flex;
+  gap: 10px;
+}
+
+.input-with-button input {
+  flex: 1;
+}
+
+.btn {
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 3px solid #fffbde;
+  box-shadow: 3px 3px 0 #096b68;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background-color: #096b68;
+  color: #fffbde;
+}
+
+.btn-primary:hover {
+  background-color: #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #129990;
+}
+
+.btn-secondary {
+  background-color: #129990;
+  color: #fffbde;
+}
+
+.btn-secondary:hover {
+  background-color: #fffbde;
+  color: #129990;
+  border-color: #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
+}
+
+/* Account Info */
+.account-info {
+  background: #fffbde;
+  border: 2px solid #129990;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 3px 3px 0 #90d1ca;
+  margin-bottom: 20px;
+}
+
+.account-info h4 {
+  color: #096b68;
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+.account-details p {
+  margin: 5px 0;
+  color: #096b68;
+  font-size: 0.5rem;
+}
+
+.status.active {
+  color: #fffbde;
+  background: #096b68;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.45rem;
+}
+
+/* Transaction Card */
+.transactions-card {
+  background: #129990;
+  border: 3px solid #fffbde;
+  box-shadow: 6px 6px 0 #096b68;
+  border-radius: 6px;
+  padding: 25px;
+}
+
+.transactions-card h2 {
+  color: #fffbde;
+  text-shadow: 1px 1px #096b68;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction-item {
+  background: #fffbde;
+  border: 2px solid #90d1ca;
+  border-radius: 4px;
+  padding: 10px;
+  color: #096b68;
+  box-shadow: 2px 2px 0 #129990;
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-type {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.transaction-amount {
+  font-size: 0.6rem;
+  color: #096b68;
+}
+
+.transaction-details {
+  font-size: 0.5rem;
+  margin-top: 5px;
+  color: #096b68;
+}
+
+/* No Transactions */
+.no-transactions {
+  text-align: center;
+  color: #fffbde;
+  font-size: 0.5rem;
+}
+
+.no-transactions .hint {
+  font-size: 0.45rem;
+  color: #90d1ca;
+}
+
+/* Guidelines Card */
+.guidelines-card {
+  margin-top: 20px;
+  background: #129990;
+  border: 3px solid #fffbde;
+  box-shadow: 6px 6px 0 #096b68;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.guidelines-card h3 {
+  color: #fffbde;
+  text-shadow: 1px 1px #096b68;
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+.guidelines-card ul {
+  padding-left: 20px;
+  color: #fffbde;
+  font-size: 0.5rem;
+}
+
+.guidelines-card li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Messages */
+.error-message,
+.success-message {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 0.55rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.error-message {
+  background-color: #fffbde;
+  color: #b3261e;
+  border: 2px solid #b3261e;
+  box-shadow: 3px 3px 0 #fffbde;
+}
+
+.success-message {
+  background-color: #fffbde;
+  color: #096b68;
+  border: 2px solid #129990;
+  box-shadow: 3px 3px 0 #90d1ca;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .deposit-content {
+    flex-direction: column;
+  }
+
+  .form-card,
+  .transactions-card,
+  .guidelines-card {
+    width: 100%;
+  }
+}
+
+button.btn.btn-primary.deposit-btn {
+  background-color: #096b68;
+  color: #fffbde;
+}
+
+button.btn.btn-primary.deposit-btn:hover {
+  background-color: #fffbde;
+  color: #096b68;
+  box-shadow: 3px 3px 0 #096b68;
 }
