@@ -1,5 +1,5 @@
 /* ==========================================================
-   🎮 AQUA PIXEL THEME — PART 1: NAVBAR, MODAL, FOOTER
+   🎮 AQUA PIXEL THEME : NAVBAR, MODAL, FOOTER
    ========================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
@@ -56,6 +56,16 @@ body {
   transform: scale(1.08);
 }
 
+/* Default: hide hamburger on desktop */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fffbde;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -103,6 +113,137 @@ body {
   color: #fffbde;
   cursor: pointer;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Show hamburger on mobile */
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    z-index: 30;
+  }
+
+  /* Dropdown menu */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #096b68;
+    border-top: 3px solid #129990;
+    box-shadow: 0 4px 0 #90d1ca;
+    position: absolute;
+    top: 55px; /* sits below navbar */
+    left: 0;
+    padding: 15px 0;
+    z-index: 5;
+    transform-origin: top;
+    overflow: hidden;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    animation: pixelSlideDown 0.35s steps(4, end);
+  }
+
+  .navbar-menu:not(.active) {
+    animation: pixelSlideUp 0.25s steps(3, end);
+  }
+
+  .navbar-item {
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+/* 🟢 Pixel Slide Animation */
+@keyframes pixelSlideDown {
+  0% {
+    transform: scaleY(0.2) translateY(-10px);
+    opacity: 0;
+  }
+  25% {
+    transform: scaleY(0.4) translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(0.7) translateY(2px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scaleY(0.9) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+/* 🟢 Slight bounce on close for realism */
+@keyframes pixelSlideUp {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleY(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+/* 🟢 Responsive menu style with animation */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #096b68;
+    border-top: 3px solid #129990;
+    box-shadow: 0 4px 0 #90d1ca;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px 0;
+    z-index: 999;
+    transform-origin: top;
+    overflow: hidden;
+  }
+
+  /* When active, trigger pixel animation */
+  .navbar-menu.active {
+    display: flex;
+    animation: pixelSlideDown 0.35s steps(4, end);
+  }
+
+  /* Optional reverse animation for hiding */
+  .navbar-menu:not(.active) {
+    animation: pixelSlideUp 0.25s steps(3, end);
+  }
+
+  .navbar-item {
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
 }
 
 /* ========================= MODAL ========================= */
@@ -265,7 +406,7 @@ body {
 }
 
 /* ==========================================================
-   🎮 AQUA PIXEL THEME — PART 2: HOME + AUTH PAGES
+   🎮 AQUA PIXEL THEME : HOME + AUTH PAGES
    ========================================================== */
 
 /* ---------- HOME ---------- */
@@ -286,16 +427,18 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 1rem;
-  text-shadow: 2px 2px #129990;
+  font-size: 1.4rem;
+  color: #fffbde;
+  text-shadow: 3px 3px 0 #096b68;
   margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #fffbde;
   opacity: 0.9;
   margin-bottom: 25px;
+  padding: 10px 40px;
 }
 
 .hero-buttons {
@@ -305,22 +448,30 @@ body {
   gap: 20px;
 }
 
-.hero-buttons .btn {
+/* Primary button */
+.hero-buttons .btn.btn-primary {
   font-family: "Press Start 2P", cursive;
-  padding: 10px 18px;
-  border: 3px solid #fffbde;
-  background-color: #129990;
-  color: #fffbde;
+  display: inline-flex; /* 🟢 allows easy vertical centering */
+  align-items: center; /* 🟢 centers text vertically */
+  justify-content: center; /* 🟢 centers text horizontally */
+  height: 50px; /* 🟢 fixed pixel-style height */
+  min-width: 150px; /* optional: consistent width */
+  padding: 0 18px; /* 🟢 horizontal padding only */
+  border: 3px solid #129990;
+  background-color: #fffbde;
+  color: #096b68;
   text-decoration: none;
   font-size: 0.55rem;
   box-shadow: 3px 3px 0 #096b68;
   transition: all 0.15s ease;
+  text-transform: none;
+  line-height: 1; /* 🟢 removes extra vertical spacing */
 }
 
-.hero-buttons .btn:hover {
-  background-color: #fffbde;
-  color: #096b68;
-  box-shadow: 3px 3px 0 #129990;
+.hero-buttons .btn.btn-primary:hover {
+  background-color: #096b68;
+  color: #fffbde;
+  box-shadow: 3px 3px 0 #fffbde;
 }
 
 /* FEATURES */
@@ -382,6 +533,35 @@ body {
   color: #fffbde;
   font-size: 0.5rem;
   opacity: 0.9;
+}
+
+.feature-icon {
+  background-color: #fffbde;
+  border: 3px solid #129990;
+  box-shadow: 3px 3px 0 #096b68;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  transition: all 0.2s ease;
+}
+
+.feature-icon svg {
+  color: #096b68;
+  width: 50px;
+  height: 50px;
+}
+
+.feature:hover .feature-icon {
+  background-color: #129990;
+  box-shadow: 3px 3px 0 #fffbde;
+}
+
+.feature:hover .feature-icon svg {
+  color: #fffbde;
 }
 
 /* ---------- AUTH SECTION ---------- */
@@ -526,6 +706,10 @@ body {
 
   .hero-buttons {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
   }
 
   .auth-form {
@@ -1884,6 +2068,15 @@ body {
 
   .action-buttons {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .action-buttons .btn {
+    width: 80%;
+    text-align: center;
   }
 
   .detail-row {
