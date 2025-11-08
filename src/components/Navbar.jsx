@@ -68,7 +68,7 @@ const Navbar = () => {
                                     className="navbar-link logout-btn"
                                     onClick={handleLogout}
                                 >
-                                    
+         
                                     Logout
                                 </button>
                                 <LogOut size={20} strokeWidth={1.5} />
