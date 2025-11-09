@@ -12,7 +12,7 @@ This is the **frontend** deploy on AWS S3 for the banking simulation project. It
 
 - Serve as the user interface for the banking simulation using the backend APIs.
 - Demonstrate portfolio-ready frontend architecture and UX design.
-- Provide an interactive single-page application (SPA) that communicates with the backend endpoints.
+- Provide an interactive multi-page application that communicates with the backend endpoints.
 - Showcase modern frontend tooling, state management, responsive design, and API integration.
 
 ---
